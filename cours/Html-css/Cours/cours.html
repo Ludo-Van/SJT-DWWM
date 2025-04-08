@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- la balise doctype est une balise orpheline, elle permet de definir le type du document -->
+<!-- la balise html est la balise mere qui contient toutes les autres balises, donc elle se ferme en dernier -->
+<html lang="fr">
+    <!-- la balise head permet de communiquer avec les moteurs de recherches et les navigateurs, sont contenue reste invisible au niveaux du navigateur exepte le contenue de la balise title -->
+    <head>
+    <!-- la balise meta charset permet de definir l'encodage utilise et utf8 esy l'encodage qui qui prend en compte toutes les subtilites de la langue francaise. -->
+        <meta charset="UTF-8">
+    <!-- la balise meta viewport permet d'adapte le contenue de la page en fonction de la taille du device utilise -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- la balise title apparait dans l'onglet du navigateur elle permet de donner un titre a chaque page -->
+        <!--l'import de typo-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+        <!-- la balise link permet de faire le lien entre le fichier html et le fichier css -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!--link pour lesmédias queries-->
+        <link rel="stylesheet" media="screen and (max-width: 500px)" href="./Assets/css/mobil.css">
+        <title>Cours HTML&CSS</title>
+    </head>
+    <body>
+        <!-- labalise body va contenir le corps de la page, elle sera separer en 3 partie, l'entete, le corps et le pied de page -->
+        <!-- la balise header va contenir tous les elements de notre entete de page -->
+        <header>
+        <!-- la balise nav va contenir tous les elements de notre menu de navigation -->
+            <h1>COURS HTML/CSS</h1>
+            <!-- <style>
+                h1, p { text-align: center;
+                    color: blue;
+                    background-color: yellow;
+                }
+            </style> -->
+            <nav>
+                <ol>
+                    <h2 id="sommaire">SOMMAIRE</h2>
+                    <li><a href="#Btitres">Les balises Titres</a></li>
+                    <li><a href="#Btextes">Les balises Textes</a></li>
+                    <li><a href="#Blistes">Les balises listes</a></li>
+                    <li><a href="#Ancres">Les Ancres</a></li>
+                    <li><a href="#Bblocs">Les balises blocs</a></li>
+                    <li><a href="#attributs">Les attributs</a></li>
+                    <li><a href="#tableaux">Les tableaux</a></li>
+                    <li><a href="#Bmedias">Les balises médias</a></li>
+                    <li><a href="#Bform">Les balises formulaire</a></li>
+                    <li><a href="#CSS">Le CSS</a></li>
+                </ol>
+            </nav>
+        <!-- la balise main va contenir le corps de la page -->
+        </header>
+            <main>
+                <h2 id="Btitres">1. Les balise titres</h2>
+
+                <p>
+                    Les balises titres sont toutes des balises blocs.Elles vont du h1 au h6,la balise h1 est la plus importante, on ne doit en avoir qu'une seule par page, elle ne doit pas depasser les 70 caracteres et doit integrer un mot cles pour un meilleur referencement SEO.
+                </p>
+
+                <h1>je suis la balise h1</h1><!--exeptionnellement-->
+                <h2>je suis la balise h2</h2>
+                <h3>je suis la balise h3</h3>
+                <h4>je suis la balise h4</h4>
+                <h5>je suis la balise h5</h5>
+                <h6>je suis la balise h6</h6>
+                
+                <h2 id="Btextes">2. les balises textes</h2>
+
+                <p>
+                    je suis une balise paragraphe et je suis une balise bloc
+                </p>
+
+                <span>je suis une balise span et je suis une balise inline</span>
+                <br><span>je suis une balise span et je suis une balise inline</span>
+                <span>le span est une balise inline alors que le p est une balise bloc.les balises bloc sont des balises dites egoiste car elle ne partage pas la ligne.
+                tandis que les balises inlins sont plutot altruistes et partagent la ligne.</span>
+                <br><span>la balise br permet le saut de ligne donc elle va etre generalement utilise avec des balises inlines</span><br>
+                <u>le balise u permet de </u><u>souligner</u><br>
+                <i>la balise i permet de mettre en italique</i><br>
+                <em>la balise em permet de mettre en italique</em><br>
+                <strong>la balise strong permet de mettre en gras</strong><br>
+                <b>la balise b permet de mettre en gras ou bolder comme la balise strong</b><br>
+                <sub>la balise sub permet de mettre en indice</sub><br>
+                <sup>la balise sup permet de mettre en exposant</sup><br>
+                <s>la balise s permet de barrer le texte</s><br>
+                <u><b>NB: les balises dites obsoletes</b></u><br>
+                <center>la balise center permet de centrer un element</center><br>
+                <big>la balise big permet de grossir le texte</big><br>
+                <small>la balise small permet de diminuer le texte</small><br>
+                <strike>la balise strike est un doublon de la balise S</strike><br>
+
+                <h2 id="Blistes">3. Les balises listes</h2>
+
+                <h3>3.1. les listes ordonnées</h3>
+                <p>
+                    les balises listes sont des balises blocs, elles fonctionnes avec 2 paires de balises, une paire qui va definir si il sagit d'une liste ordonnées ou non, une autre qui va definir les elements de la liste.
+                </p>
+                <ol><!--ordonned liste/liste ordonnée-->
+                    <li>premier element</li><!--element de la liste-->
+                    <li>deuxieme element</li>
+                    <li>troisieme element</li>
+                </ol>
+                <p>on peut changer les types de puces avec l'attribut types</p>
+                <p>Liste avec types A:</p>
+                <ol type="A"><!--ordonned liste/liste ordonnée-->
+                    <li>premier element</li><!--element de la liste-->
+                    <li>deuxieme element</li>
+                    <li>troisieme element</li>
+                </ol>
+                <p>Liste avec types a:</p>
+                <ol type="a"><!--ordonned liste/liste ordonnée-->
+                    <li>premier element</li><!--element de la liste-->
+                    <li>deuxieme element</li>
+                    <li>troisieme element</li>
+                </ol>
+                <p>Liste avec types I:</p>
+                <ol type="I"><!--ordonned liste/liste ordonnée-->
+                    <li>premier element</li><!--element de la liste-->
+                    <li>deuxieme element</li>
+                    <li>troisieme element</li>
+                </ol>
+                <p>Liste avec types i:</p>
+                <ol type="i"><!--ordonned liste/liste ordonnée-->
+                    <li>premier element</li><!--element de la liste-->
+                    <li>deuxieme element</li>
+                    <li>troisieme element</li>
+                </ol>
+
+                <h3>3.2. les listes non ordonnées</h3>
+
+                <p>
+                    les balises listes non ordonnées sont des balises blocs, elles fonctionnes avec 2 paires de balises, une paire qui va definir si il sagit d'une liste non ordonnées ou non, une autre qui va definir les elements de la liste.
+                </p>
+                <ul><!--unordonned liste/liste non ordonnée-->
+                    <li>Henri</li><!--element de la liste-->
+                    <li>Jacques</li>
+                    <li>Marie</li>
+                </ul>
+
+                    <p>on peut changer les types de puces avec l'attribut types</p>
+                    <p>Liste avec types circle:</p>
+
+                <ul type="circle">
+                    <li>Henri</li>
+                    <li>Jacques</li>
+                    <li>Marie</li>
+                </ul>
+
+                    <p>Liste avec types square:</p>
+
+                <ul type="square">
+                    <li>Henri</li>
+                    <li>Jacques</li>
+                    <li>Marie</li>
+                </ul>
+
+                <h3>3.3 Les listes definies</h3>
+
+                    <p>
+                    les balises listes definies sont des balises blocs, elles fonctionnes avec 2 paires de balises, une paire qui va definir si il sagit d'une liste definies ou non, une autre qui va definir les elements de la liste.
+                    </p>
+
+                <dl><!--liste definies permet de definir notre liste-->
+                    <dt>prenom</dt><!--titre de la definition-->
+                    <dd>Anthony</dd><!--define data, permet de definir une donnee de la liste-->
+                    <dt>Mathieu</dt>
+                    <dd>Gracia</dd>
+                </dl>
+
+                    <p>
+                    la liste definies ne supporte pas les types comme ces semblables
+                    </p>
+
+                <h2 id="Ancres">4. Ancre</h2>
+
+                    <p>
+                    la balise A comme ancre permet de creer des liens hypertext pour facilité la navigation entre les pages web. c'est une balise inline, sont attribut href doit contenir l'adresse du lien où on souhaite envoyer l'utilisateur.
+                    </p>
+                <a href="httpss://www.goolge.com" target_blank:>Google</a><br>
+                <a href="httpss://www.goolge.com">htttps://www.google.com</a><br>
+                
+                <h2 id="Bblocs">5. Les balises bloc</h2>
+
+                <div>je suis une balise Div</div>
+                <aside>je suis une balise aside</aside>
+                <section>je suis une balise section</section>
+                <article>je suis une balise article</article>
+                <header>je suis une balise header</header>
+                <footer>je suis une balise footer</footer>
+                <main>je suis une balise main</main>
+                <nav>je suis une balise nav</nav>
+                
+                <h2 id="attribut">6. Les attribut</h2>
+
+                <p>les attributs sont des informations supplémentaires qui sont ajoutés à une balise HTML pour personnaliser ou spécifier des comportements.</p>
+                <ul>
+                    <li><u><b>LANG :</b></u>permet de definir le language avec lequel on programme, exemple : fr ou en</li>
+                    <li><u><b>charset :</b></u>permet de definir l'encodage utilise</li>
+                    <li><u><b>Name :</b></u>permet de definir un nom a la balise meta</li>
+                    <li><u><b>Content :</b></u>permet de definir le contenu du meta</li>
+                    <li><u><b>src :</b></u>permet de definir l'adresse d'une image</li>
+                    <li><u><b>href :</b></u>permet de definir l'adresse d'un lien</li>
+                    <li><u><b>alt :</b></u>permet de definir une description alternative pour une image</li>
+                    <li><u><b>class :</b></u>permet de definir une ou plusieurs classes pour une balise</li>
+                    <li><u><b>id :</b></u>permet de definir un identifiant unique pour une balise</li>
+                    <li><u><b>style :</b></u>permet de definir du style directement dans une balise</li>
+                    <li><u><b>data-:</b></u>permet de definir des données personnalisées pour une balise</li>
+                    <li><u><b>target :</b></u>permet de definir ou ouvrir le lien dans une nouvelle fenetre</li>
+                </ul>
+                <h2 id="tableaux">7.Les tableaux</h2>
+                <p>ont realise des tableaux avec HTML5 en utilisant un certain nombres de balises <br>
+                <u><b>Exemple:</b></u></p>
+                <table border="1" width="80%" height="20%" celspacing="20px"><!--permet de creer un tableau cellspacing de mettre des espace entre les cellules-->
+                    <tr>
+                        <th>Nom</th><!--table header pour mettre la tete-->
+                        <th>Age</th>
+                        <th>Fruit</th>
+                        <th>Club supporter</th>
+                        <th>Pointure</th>
+                    </tr>
+                    <tr>
+                        <td>julien </td><!--table data pour mettre la donnee-->
+                        <td>23</td>
+                        <td>pomme</td>
+                        <td>psg</td>
+                        <td>41</td>
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+                    <tr>
+                        <td>stanley</td><!--table data pour mettre la donnee-->
+                        <td>19</td>
+                        <td colspan="2">bannane</td><!--col span permet de fusionner deux colonne de la meme ligne-->
+                        <td>lyon</td>
+                        <td rowspan="2">39 / 44</td><!--row span permet de fusionner deux lignes de la meme colonne-->
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+                    <tr>
+                        <td>armel</td><!--table data pour mettre la donnee-->
+                        <td>32</td>
+                        <td>fraise</td>
+                        <td>marseille</td>
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+
+                </table>
+                <table border="1" width="80%" height="20%"><!--permet de creer un tableau -->
+                    <tr>
+                        <th>Nom</th><!--table header pour mettre la tete-->
+                        <th>Age</th>
+                        <th>Fruit</th>
+                        <th>Club supporter</th>
+                        <th>Pointure</th>
+                    </tr>
+                    <tr>
+                        <th>personne 1</th>
+                        <td>julien </td><!--table data pour mettre la donnee-->
+                        <td>23</td>
+                        <td>pomme</td>
+                        <td>psg</td>
+                        <td>41</td>
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+                    <tr>
+                        <th>personne 2</th>
+                        <td>stanley</td><!--table data pour mettre la donnee-->
+                        <td>19</td>
+                        <td>bannane</td>
+                        <td>lyon </td>
+                        <td>39</td>
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+                    <tr>
+                        <th>personne 3</th>
+                        <td>armel</td><!--table data pour mettre la donnee-->
+                        <td>32</td>
+                        <td>fraise</td>
+                        <td>marseille</td>
+                        <td>44</td>
+                    </tr><!--table row pour definir une nouvelle ligne du tableau-->                    
+                </table>
+                <h2 id="Bmedias">8. les balises médias</h2>
+                <p>HTML proposes plusieurs balises médias pour : les images, les fichiers audios et la vidéo, toutes les balises média sont des balises inlines</p>
+                <img src="./Assets/img/wow_warwithin.jpg" alt="image de warcraft"><!--la balise img fonctionne avec deux atributs : SRC qui prend le chemin d'acces au fichier et ALT qui prend la description de l'image-->
+                <video src="./Assets/videos/circulation.mp4" controls></video><!--la balise video n'est pas une balise orpheline comme la balise img, elle aussi fontionne avec l'attribut src qui prend le chemin d'acces au fichier et control pour controler la video-->
+                <audio src="./Assets/mp3/generique.mp3" controls></audio>
+                
+                <h2 id="Bform">9. Les balises Formulaires</h2>
+
+                <p>
+                    HTML proposes plusieurs balises pour creer different types de formulaire.  comme le formulaire d'inscription, de connection ou de newsletter... on utilise la balise FORM pour creer un formulaire.
+                </p>
+
+                <form action="">
+                    <label for="nom">NOM</label><!--le label permet de donné une idication sur le champ de saisi, elle fonctionne avec l'attribut FOR qui va prendre en paramettre l'id du champ correspondant-->
+                    <input type="text" id="nom" placeholder="Dupont"><br><!--la balise input permet de realiser des champs de saisie ou de selection avec different types et attributs-->
+                    <label for="prenom">prenom</label>
+                    <input type="text" id="prenom" placeholder="Jean" required><br><!--l'attribut required permet de rendre le champ obligatiore-->
+                    <label for="mail">mail</label>
+                    <input type="email" id="mail" placeholder="jdupont@gmail.com"><br>
+                    <label for="password">mot de passe</label>
+                    <input type="password" id="mdp" placeholder="*******"><br>
+                    <label for="tel">Telephone</label>
+                    <input type="number" id="tel" placeholder="06 12 34 56 78"><br>
+                    <label for="date">date de naissance</label>
+                    <input type="date" id="date"><br>
+                    <label for="fichier">votre cv</label>
+                    <input type="file" id="fichier"><br>
+                    <label for="couleur">couleur preferer</label>
+                    <input type="color" id="couleur"><br>
+                    <label for="site">votre site web</label>
+                    <input type="url" id="site" placeholder="https://www.google.fr/"><br>
+                    <label for="sexe">Sexe</label>
+                    <input type="radio" name="sexe" id="homme">Homme<!--l'attribut name permet d'avoir qu'un seul choix possible-->
+                    <input type="radio" name="sexe" id="femme">Femme<br>
+                    <label for="Pointure">pointure</label>
+                    <input type="range" id="pointure" min="36" max="46" step="1"><br>
+                    <label for="cgu">accord</label>
+                    <input type="checkbox" id="cgu">J'accepte les conditions d'utilisation<a href="">CGU</a><br>
+                    <label for="formation">Formation:</label>
+                    <select id="formation">
+                        <option value="">-</option>
+                        <option value="">DWWM</option>
+                        <option value=""sellected>CDA</option> <!--l'attribut selected permet de definir une valeur par defaut-->
+                        <option value="">CDUI</option>
+                    </select>
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" rows="15" cols="60"></textarea><br>
+                    <input type="button" value="connexion"><br>
+                    <button>inscription</button><br><br><!--ne pas utiliser dans un formulaire car il ne permet pas de recuperer les informations-->
+                    <input type="submit" value="envoyer"><!--le submit correspond a la soumissions du formulaire-->
+                </form>
+
+                <h2 id="CSS">10. Le CSS</h2>
+
+                    <h3>10.1 Introduction</h3>
+                <p>le Cascading Styles Sheets est un langage de style qui permet de mettre en forme les pages HTML, il permet de definir la couleur, la taille, la police de caractere, la mise en page, les animations, les transitions... Les standars definicents le CSS sont publier par le W3C(world whild web consortium)</p>
+                <h3>10.2 les objectifs</h3>
+                    <ul>
+                        <li>separer le contenu de la presentation, c'est a dire séparer la structure html des styles CSS</li>
+                        <li>controler l'apparence et le rendu des pages html></li>
+                        <li>controler exclusivement la forme et non le fond</li>
+                        <li>interpretation et compatibilite avec tous les navigateurs</li>
+                    </ul>
+                    <h3>10.3 historique</h3>
+                    <ol>
+                        <li>la première version de CSS à ete publier en 1996</li>
+                        <li>en 1997 Internet explorer utilisait le CSS</li>
+                        <li>en 1998 le w3c publie la premiere version de css qui va devenir la normede style conforme</li>
+                    </ol>
+                <h3>10.4 la localisation</h3>
+                <p>dans un document html on peut retrouver le css dans 3 endroits bien distinct</p>
+                <h4>le CSS intraligne</h4>
+                <p>le code CSS est ecrit directement a l'interieur des balises html à l'aide de l'atribut styles<br><u><b>Exemple</b></u></p>
+                <span style="color: red; font-size: 2em;">je suis un span avec du style intraligne CSS.</span>
+                <h4>le CSS interne</h4>
+                <p>cette methode bien quelle fonctionne n'est pas recommander par le w3c, car il sagit de mettre le css dans le head du document a l'aide de la balise style<br><U><B>exemple: <br>voir le head de la page</B></U></p>
+                <h4>le CSS externe</h4>
+                <p>cette methode correspond à la reglementation W3C qui consiste à séparer le fond de la forme. Le CSS est ecrit dans un fichier externe généralement nommé style.css dans un repertoire CSS inclus dans un autre repertoire ASSETS<br><b><u>Exemple: <br>voir le dossiers Assets du projet cours HTML-CSS</u></b></p>
+                <h3>10.5 les principes du CSS</h3>
+                <p>la syntaxte du css se compose d'un selecteur ou d'un ensemble de selecteurs suivi par un bloc d'instructions délimité par des accolades. Chaque instructions est composé d'une propiétée suivi de : et d'une valeur et se termine par un point virgule(;)<br><u><b>exemple :</b></u><br>selecteurs {propriété : valeur ; ...}</p>
+                <p>les types de selecteurs</p>
+                <ul>
+                    <li>element</li>
+                    <span>selectionné a partir du nom ou des nom de balises</span>
+                    <li>class</li>
+                    <span>selectionné a partir du nom ou des nom de class précéde d'un point(.), au moins deux elements ont cette meme class</span>
+                    <li>id</li>
+                    <span>selectionné a partir du nom ou des nom d'id precede d'un #, identifiant unique pour un element</span>
+                </ul>
+                <p>hyerarchie des selecteurs</p>
+                <ol>
+                    <li>ID</li>
+                    <li>Class</li>
+                    <li>Element balise(s)</li>
+                </ol>
+                <p><u><b>Exemple</b></u></p>
+                <div><p>Div Zero</p></div>
+                <div id="DivOne"><p>Div 1</p></div>
+                <div class="DivTwo"><p>Div 2</p></div>
+                <div class="DivTwo"><p>Div 3</p></div>
+                <h3>10.6 Propriétées</h3>
+                <p>
+                    les CSS fonctionne comme les objects en programation orienté object. il possèdes des proprietes auxquelles on associe des valeurs. par exemple pour la propriétée color(couleur) on peut associer la couleur que lon souhaite. color: green;
+                </p>
+
+                <h4>Propriétées texte</h4>
+
+                <p><b><u>Exemple :</u></b><br>Voir <a href="./Assets/Css/style.css">style.css</a></p>
+
+                <p id="test">je suis le paragraphe pour tester les propriétées textes.</p>
+
+                <h4>comment importer des typographies</h4>
+
+                <p>il existe 3 magnière differente pour importer une typographies en html</p>
+
+                <ul>
+                    <li>Avec le balise link</li>
+                    <li>Avec l'@import en Css </li>
+                    <li>en telechargent la typo dans le projet</li>
+                </ul>
+                <p id="ChangeTypo">Je suis un paragraphe avec une typographies importer</p>
+                <p id="ChangeTypo2">Je suis un paragraphe avec une typographies importer</p>
+                <p id="ChangeTypo3">Je suis un paragraphe avec une typographies importer</p>
+                <h4>les propriétées blocs</h4>
+                <p>les balises inlines s'alignent directement en fonction de la taille qu'elles occupentalors que les balises blocs se positionnent les unes en dessous des autres.</p>
+                <p><u>Alignement.</u></p>
+
+                <ul id="alignement">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <div id="alignement2">
+                    <img id="img1" src="./Assets/img/wow_warwithin.jpg" alt="image de warcraft">
+                    <p id="pg1">
+                        Qu'est-ce que Lorem Ipsum? Lorem Ipsum est simplement un texte fictif de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, quand une imprimante inconnue a pris une cuisine de type et l'a brouillé pour faire un échantillon de type. Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique, restant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker, y compris des versions de Lorem Ipsum.<br>
+                        pourquoi l'utilisons-nous ? Il est établi de longue date qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa présentation. Le but de l'utilisation de Lorem Ipsum est qu'il a une distribution de lettres plus ou moins normale, par opposition à l'utilisation de "Content here, content here", ce qui le rend lisible en anglais. De nombreux logiciels de publication assistée par ordinateur et éditeurs de pages web utilisent maintenant Lorem Ipsum comme texte par défaut, et une recherche de «lorem ipsum» permettra de découvrir de nombreux sites web encore à l'aube. Diverses versions ont évolué au fil des ans, parfois par accident, parfois à dessein (l'humour injecté, etc.).
+                    </p>
+                </div>
+                <h4>superpositions</h4>
+                <p><u><b>positions relative et absolut</b></u></p>
+                <div class="mere">
+                    <img src="./Assets/img/wow_warwithin.jpg" alt="image de warcraft">
+                    <div class="enfant">
+                        <h5>bienvennue dans la zone de superposition</h5>
+                    </div>    
+                </div>
+
+                <p><u><b>Z index</b></u></p>
+
+                <p>
+                    ont peut superposer un element beaucoup plus simplement avec le Z index, il donne une priorite a chaque element. l'element que l'on voudra classer au dessus de tous les autres auras forcement un Z index plus important</p><b><u>Exemple:</u></b>voir le boutton contactez nous.
+                    </p>
+                <div class="decal"></div>
+                <button class="btnctc">Contactez-nous</button>
+                <h3>10.7 les pseudos seclecteurs</h3>
+                <p>
+                    les pseudos selecteurs ou pseudos class permette de selectionner des parties d'un element ou l'element lui meme, dans un certain contexte</b></p>exemple</u></b><br>la premiere lettre d'un paragraphe, un hover sur un bouton ou un lien, le premier enfant d'une liste...<br> voir style Css
+                </p>
+
+                <p id="parasc">
+                    je sui un paragraphe dont la première lettre est stylisée
+                </p>
+
+                <ul id="ulsc">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <label for="Prenomsc">Prenom</label>
+                <input type="text" name="" id="Prenomsc"><br>
+                <a href="https://www.goolge.com" id="asc" target="_blank">google</a>
+                <button class="btnctc">bouton pseudo-class</button>
+                <h4>pseudos elements</h4>
+                <p>
+                    on distingue les speudos elements des pseudos class car ces derniers vont apporter des specifications a un elements ou sous elements tandis que le premier vont permettres de rajouter du contenue. <br><b><u>exemple:</u></b>
+                </p>
+                <p id="paraspe">
+                    je suis accompagné de pseudo elements
+                </p>
+                <h3>10.8. le GRID css</h3>
+                <p>
+                    le GRID css est une grille qui comme les tableau permet d'aligner des elements en ligne et en colonne mais a la difference des tableau, le GRID na pas de structure de contenue ainsi ont peux creer de nombreuses mise en pages qui ne serait pas possible avec les tableux. <br><u><b>Exemple:</b></u>
+                </p>
+                <div class="mozaique">
+                    <img id="image1"src="./Assets/img/pexels-eberhardgross-1421903.jpg" alt="description de l'image">
+                    <img id="image2"src="./Assets/img/pexels-eberhardgross-443446.jpg" alt="description de l'image">
+                    <img id="image3"src="./Assets/img/pexels-pixabay-33109.jpg" alt="description de l'image">
+                    <img id="image4"src="./Assets/img/pexels-rachel-xiao-253850-772429.jpg" alt="description de l'image">
+                    <img id="image5"src="./Assets/img/pexels-samandgos-709552.jpg" alt="description de l'image">
+                </div>
+                <div class="decal"></div>
+                <h3>10.9. le media queries</h3>
+                <p>
+                    les medias queries font parties des nouveautées de CSS3. il ne sajit pas de nouvelle proprietées mais de regles que l'ont peut appliquer dans certaines conditions. concrètement nous allons pouvoir dire si la resolution de l'ecran de l'utilisateur est inférieure à tant, applique ces propriétés css.cela nous permet de changer l'apparence du site selon la fonction des tailles de l'ecran. c'est ce qu'on appel le responsive design.
+                </p>
+                <h4>la syntaxte</h4>
+                <p>
+                    une requette media se compose d'un type de media optionnel et d'une ou plusieurs expressions de caracteristique de media. Plusieurs requettes peuvent etre combinées entre elles, grace a des opérateurs logique. les requettes médias ne sont pas sensible à la casse. <br>Une requette media vaut true si le type de media correspond à l'appareil utilisé sinon elle vaut false.
+                </p>
+                <h4>Les types de médias</h4>
+                <p>
+                    un type de médias definit une catégorie générale d'appareils, le type de média est optionnel dans une requette media, sauf si celle-ci utilise les opérateurs logique not ou only. Par defaut, le type de média utilisé est ALL.
+                </p>
+                <ul>
+                    <li>all : applique les styles css à tous les types de médias</li>
+                    <li>print : applique les styles css aux impression et aux documents en mode aperçu avant impression(paginer)</li>
+                    <li>screen : applique les styles css aux écrans d'ordinateurs, tablettes, smartphones...</li>
+                    <li>speech : applique les styles css aux synthèses vocales</li>
+                </ul>
+                <h4>Les caractéristiques media</h4>
+                <p>
+                    Elles décrivent certaines spécificités de l'agent utilisateur de l'appareil d'affichage ou de l'environement. Les expressions des carractéristique médias testent leur presence ou leur valeur. <br><u><b>Exemple:</b></u>
+                </p>
+                <ul>
+                    <li>color</li><span>gestion de la couleur</span>
+                    <li>width</li><span>gestion de la largeur des ecrans</span>
+                    <li>eignt</li><span>gestion de la hauteur des écrans</span>
+                    <li>...</li>
+                </ul>
+                <p>
+                    ont peut rajouter les prefix <b>min</b>et <b>max</b>devant la plus part de ces caractéristiques, ainsi min-width voudra dir la largeur minimale.
+                </p>
+                <h4>Opérateur logique</h4>
+                <p>
+                    les operateurs logiques not , only et and peuvent etre utiliser afin de construire une requette media complexe. Il est aussi possible de combiner plusieurs requettes media en les separant par des virgules.
+                </p>
+                <ul>
+                    <li>not</li><span>Il est utiliser pour obtenir le resultat inverse de la requette média</span>
+                    <li>only</li><span>Il est utiliser afin d'appliquer un style unique à une requette</span>
+                    <li>and</li><span>Il permet de combiner plusieurs requettes médias</span>
+                    <li>,</li><span>Il permet de combiner plusieurs requettes en une seule</span>
+                </ul>
+                <h4>Application</h4>
+                <p>
+                    Les médias queries sont des règles qui indiques quand on doit appliquer des propriétés css. Il existe deux manières de les utiliser. 
+                </p>
+                <ul>
+                    <li>En chargeant une feuille de style CSS different en fonction de chaque support.</li>
+                    <li>En utilisant les requettes dans le fichier CSS habituel style CSS.</li>
+                </ul>
+
+            </main>
+        <!-- la balise footer va contenir tous les elements du pied de page -->
+            <footer>
+
+            </footer>
+    </body>
+</html>

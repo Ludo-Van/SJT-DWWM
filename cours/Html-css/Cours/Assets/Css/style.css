@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Bungee+Tint&display=swap');
+
+@font-face {
+    font-family: "love-light";
+    src: url(../fonts/LoveLight-Regular.ttf);
+}
+h1 {
+    font-size: 2em;
+    color: blue;
+    background-color: yellow;
+    text-align: center;
+    }
+
+h2 {
+    font-size: 1.5em;
+    color: yellow;
+    background-color: blue;
+    text-align: center;
+    }
+
+h3 {
+    font-size: 1em;
+    color: blue;
+    text-align: center;
+    }
+
+h4 {
+    font: size 1em;
+    color: blueviolet;
+    text-align: center;
+    }
+p {text-align: center;}
+div {
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50%;
+    background-color: goldenrod;
+    }
+.DivTwo {
+    width: 70%;
+    background-color: green;
+    }
+#DivOne {
+    width: 90%;
+    background-color: pink;
+    }
+/*---------------------------------------------------------------Propriétés textes---------------------------------------------------------------*/
+
+#test {
+        font-size: 2em;/*pour changer la taille de la police*/
+        font-family: Arial, sans-serif;/*pour changer la police*/
+        font-weight: bold;/*pour mettre en gras*/
+        font-style: italic;/*pour mettre en italique*/
+        text-transform: uppercase;/*pour mettre en majuscule*/
+        text-decoration: underline;/*pour souligner*/
+        text-align: left;/*pour aligner le texte*/
+        text-indent: 200px;/*pour indenter(decaler) le texte*/
+        color: aqua;/*pour changer la couleur du texte*/
+        text-shadow: 4px 2px 6px black;/*pour ajouter une ombre au texte*/
+        letter-spacing: 3px;/*pour espacer les lettres*/
+        }
+        #ChangeTypo {font-family: "Boldonse", system-ui;}
+        #ChangeTypo2 {font-family: "Bungee Tint", sans-serif;}
+        #ChangeTypo3 {font-family: "love-light", cursive;}
+/*---------------------------------------------------------------Propriétés Blocs---------------------------------------------------------------*/
+
+#alignement {
+        background-color: rgb(156, 18, 18);
+        padding: 50px;/*marge interne*/
+        display: flex;/*le display force les blocs a s'aligner*/
+        justify-content: space-evenly;/*le justify-content aligne les blocs sur l'axe horizontal*/
+        align-items: center;/*le align-items aligne les blocs sur l'axe vertical*/
+        }
+
+#alignement li {
+        width: 20%;
+        background-color: gray;
+        height: 100px;
+        list-style: none;/*pour gerer les puces sur les listes*/
+        }
+
+#alignement2 {
+    background-color: transparent;
+    width: 100%;
+}
+
+#img1 {
+    width:25%;
+    float: left; /*pour aligner l'image à droite*/
+    margin: 10px; /*marge externe*/
+}
+#pg1 {
+    text-align: justify;
+}
+/*----------------------------------------------------------------superpositions-----------------------------------------------------------------*/
+.mere {
+    width: 100%;
+    position: relative; /*pour positionner les enfants par rapport à la mère*/
+    background: transparent;
+    margin-top: 400px;
+}
+
+.mere img {
+    width: 100%;
+}
+
+.enfant {
+    width: 100%;
+    background-color: transparent;
+    position: absolute; /*pour positionner les enfants par rapport à la mère*/
+    top: 200px;
+}
+
+.enfant h5{
+    font-size: 4em;
+    color: pink;
+    text-shadow: 1px 3px 4px black;
+    text-align: center;
+}
+.decal {
+    height: 900px;
+    background: transparent;
+}
+/*----------------------------------------------------------------Zindex-----------------------------------------------------------------*/
+
+.btnctc {
+    background-color: blue;
+    position: absolute;
+    color: yellow;
+    font-family: 1em;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: -1500px;
+    z-index: 5000px; /*ne pas mixer les position avec le z index car elles prendront toujours la priorité*/
+    /*--pour centerles balises inlines-- */
+    margin-left: 50%;
+    transform: translate(-50%);
+    }
+
+/*----------------------------------------------------------------lespseudos class-----------------------------------------------------------------*/
+
+#parasc::first-letter {
+    font-family: 1.5em;
+    font-weight: 700;
+    color: green;
+}
+
+#ulsc li:first-child,
+#ulsc li:last-child {
+    background-color: blueviolet;
+    font-size: 2em;
+}
+
+#Prenomsc:focus{
+    background-color: red;
+}
+
+#asc:active {
+    background-color: orange;
+    color: blue;
+}
+
+#asc:visited {
+    background-color: black;
+    color:yellow;
+}
+#btnsc:hover {
+    background-color: black;
+    color: white;
+}
+/*------------pseudos elements-----------------*/
+
+#parapse{
+    font-size: 2em;
+    color: green;
+}
+
+#parapse::before {
+    content: "Qui t'acconpagne ? <, ";
+    color: blue;
+    background-color: yellow;
+}
+
+#parapse::after {
+    content: ">ah bon!";
+    color: yellow;
+    background-color: blue;
+}
+/*------------GRID CSS-----------------*/
+
+.mozaique{
+    width: 80%;
+    background-color: transparent;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "img1 img2"
+        "img3 img3"
+        "img4 img5";    
+}
+
+#image1 {
+    width: 100%;
+    height: 200px;
+    grid-area: img1;
+}
+#image2 {
+    width: 100%;
+    height: 200px;
+    grid-area: img2;
+}
+#image3 {
+    width: 100%;
+    height: 200px;
+    grid-area: img3;
+}
+#image4 {
+    width: 100%;
+    height: 200px;
+    grid-area: img4;
+}
+#image5 {
+    width: 100%;
+    height: 200px;
+    grid-area: img5;
+}
+/*------------MEDIA QUERIES-----------------*/
+
+@media screen and (min-width:501px) and (max-width: 900px) {
+*{background-color: green;
+    margin: 0;
+    padding: 0;
+}
+}
+/*--SOMMAIRE--*/
+
+nav ol{
+    background-color: rgb(66, 66, 70);
+    margin-bottom: 20px;
+    padding: 50px;
+    width: 60%;
+    border-radius: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ol li{
+    background-color: yellow;
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    list-style: none;;
+}
+
+nav ol li a{
+    color: blue;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}

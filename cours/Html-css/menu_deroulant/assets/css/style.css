@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*-------------------header------------------*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(blue, white);
+    height: 80px;
+    border-bottom: 2px solid blue;
+}
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+}
+header a {
+    text-decoration: none;
+}
+.logo p{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: gold;
+    text-align: left;
+}
+nav{
+    width: 70%;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+header li{
+    padding: 20px;
+    width: 140px;
+    list-style: none;
+    text-align: center;
+}
+header li:hover{
+    background: linear-gradient(blue, white);
+    transition: 0.5s;
+}
+header li a {
+    color: gold;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+header li a:hover {
+    color: black;
+}
+.sousmenu{
+    background: linear-gradient( white, blue);
+    margin-top: 20px;
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    /* visibility: hidden; pour cacher le sous menu */
+    display: none; /*pour cacher le sous menu comme la visibility*/
+}
+.menu li:hover .sousmenu{
+    /* visibility: visible; */
+    display: block;
+}
+/*-------------------banniere index------------------*/
+.banniere{
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 255, 0.551), rgba(255, 255, 255, 0.208)), url(../images/wow_warwithin.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    text-align: center;
+}
+h1{
+    color: gold;
+    text-shadow: 1px 2px 2px black;
+    font-size: 5em;
+    padding-top: 150px;
+}
+.btn{
+    background-color: blue;
+    color: gold;
+    font-size: 1em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.btn:hover{
+    background-color: gold;
+    color: blue;
+}
+/*-------------------footer------------------*/
+footer{
+    background: linear-gradient(blue, white);
+    padding: 50px;
+    margin-top: 100px;
+}
+footer .gauche,
+footer .milieu,
+footer .droite{
+    width: 30%;
+    text-align: center;
+}
+footer h2{
+    font-size: 2em;
+    color: gold;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 0;
+    background-color: transparent;
+}
+footer ul li{
+    list-style: none;
+    padding: 5px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: greenyellow;
+    text-shadow: 1px 2px 2px black;
+    font-size: 1em;
+}
+footer p{
+    color: gold;
+    text-shadow: 1px 2px 2px black;
+    font-size: 1.2em;
+}
+footer table{
+    width: 100%;
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+} 
+
+/*-------------------banniere autres pages------------------*/
+.banniere2{
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 255, 0.628), rgba(255, 255, 255, 0.208)), url(../images/marketing.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    text-align: center;
+}
+/*-------------------section apropos index------------------*/
+.apropos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "im aside";
+}
+#aps{
+    grid-area: im;
+    width: 80%;
+    margin-left: 50px;
+}
+#props{
+    grid-area: aside;
+    margin-right: 50px;
+    text-align: center;
+}
+h2{
+    background-color: blue;
+    color: gold;
+    font-size: 3em;
+    text-shadow: 1px 2px 2px black;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+h3{
+    background-color: gold;
+    color: blue;
+    font-size: 1.8em;
+    text-shadow: 1px 2px 2px black;
+    text-align: left;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+/*-------------------section blog index------------------*/
+.blog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "aside1 aside2 aside3";
+    margin: 10px 50px;
+}
+.blog img{
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+#art1{
+    grid-area: aside1;
+
+}
+#art2{
+    grid-area: aside2;
+
+}
+#art3{
+    grid-area: aside3;
+
+}
+#art1, #art2, #art3{
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+/*-------------------section boutique index------------------*/
+.boutique{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "b1 b2 b3 b4"
+                         "b5 b6 b7 b8"
+                         "b9 b10 b11 b12";
+    margin: 10px 50px;
+}
+.boutique img{
+    width: 100%;
+    border-radius: 30px;
+}
+#b1{
+    grid-area: b1;
+}
+#b2{
+    grid-area: b2;
+}
+#b3{
+    grid-area: b3;
+}
+#b4{
+    grid-area: b4;
+}
+#b5{
+    grid-area: b5;
+}
+#b6{
+    grid-area: b6;
+}
+#b7{
+    grid-area: b7;
+}
+#b8{
+    grid-area: b8;
+}
+#b9{
+    grid-area: b9;
+}
+#b10{
+    grid-area: b10;
+}
+#b11{
+    grid-area: b11;
+}
+#b12{
+    grid-area: b12;
+}
+
+#b1, #b2, #b3, #b4,
+#b5, #b6, #b7, #b8,
+#b9, #b10, #b11, #b12{
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 30px;
+    margin: 10px;
+    text-align: center;
+}
+.boutique p{
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+h4{
+    font-size: 1.5em;
+    color: blue;
+}
+/*-------------------section contact index------------------*/
+.contact iframe{
+    border: 0;
+    width: 100%;
+    height: 500px;
+}
+.contact table {
+    width: 60%;
+    margin-left: 20%;
+    text-align: left;
+    background-color: gold;
+    padding: 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+tr td input{
+    width: 100%;
+    height: 30px;
+}
+tr td textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+#cgu{
+    width: 10%;
+    height: 20px;
+}
+#submit{
+    width: 20%;
+    padding-bottom: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+table td p{
+    color: red;
+}
+table label span {
+    color: red;
+}

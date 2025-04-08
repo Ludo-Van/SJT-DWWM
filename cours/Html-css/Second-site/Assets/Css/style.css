@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../img/WEB-DEV.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* -----HEADER------ */
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    background: transparent;
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    background: transparent;
+}
+.logo p{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: greenyellow;
+    text-align: left;
+    background: transparent;
+}
+.logo img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: transparent;
+}
+nav{
+    width: 60%;
+    background: transparent;
+}
+header li{
+    list-style: none;
+    font-size: 1em;
+    color: greenyellow;
+    background: transparent;
+}
+
+header li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: greenyellow;
+    background: transparent;
+}
+header li a:hover{
+    text-decoration: none;
+    font-size: 1em;
+    color: gold;
+    background: transparent;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    background: transparent;
+}
+.sousmenu{
+    position: absolute;
+    margin-left: -2.5px;
+    margin-top: 20px
+    px;
+    display: none;
+    background: transparent;
+}
+
+.menu li:hover .sousmenu{
+    display: block;
+    background: transparent;
+}
+/* -----BANNIERE----- */
+#banniere{
+    height: 50vh;
+    text-align: center;
+    background:transparent
+}
+h1{
+    font-size: 5em;
+    color: whitesmoke;
+    text-shadow: 1px 2px 2px blue ;
+    padding-top: 150px;
+    background: transparent;
+}
+.btn{
+    font-size: 1em;
+    background-color: lightseagreen;
+    color: whitesmoke;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.btn:hover{
+    background-color: goldenrod;
+}
+
+/* -----A PROPOS----- */
+h2{
+    color:greenyellow;
+    font-size: 3em;
+    text-shadow: 1px 2px 2px black;
+    padding: 10px;
+    text-align: center;
+    background: transparent;
+}
+h3{
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 3em;
+    text-shadow: 1px 2px 3px black;
+    padding: 10px;
+    background: transparent;
+}
+.apropos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+}
+.apropos .left{
+    width: 30%;
+    background: transparent;
+}
+.apropos .right{
+    width: 60%;
+    height: 350px;
+    text-align: justify;
+    background: transparent;
+
+}
+.left img{
+    width: 100%;
+    background: transparent;
+}
+.right p{
+    color: greenyellow;
+    font-size: 2em;
+    background: transparent;
+}
+

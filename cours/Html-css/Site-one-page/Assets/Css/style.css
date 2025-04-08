@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: blueviolet;
+    border-bottom: 2px solid black;
+    height: 80px;
+    /* pour fixer le menu */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.logo p{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: orange;
+    text-align: left;
+}
+.nav{
+    width: 60%;
+}
+header li{
+    list-style: none;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+header li:hover{
+    background: linear-gradient(blueviolet,white);
+}
+header li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: yellow;
+}
+header li a:hover{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.sousmenu{
+    background-color: blueviolet;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 10px;
+    display: none;
+}
+.sousmenu li:first-child{
+    border-bottom: 2px solid yellow;
+}
+.sousmenu li:last-child{
+    border-top: 2px solid yellow;
+}
+.menu li:hover .sousmenu{
+    display: block;
+}
+/* BANNIERE */
+#banniere{
+    background: url(../img/pexels-eberhardgross-1421903.jpg);
+    height: 80vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1{
+    font-size: 5em;
+    color: yellow;
+    text-shadow: 1px 2px 2px blueviolet;
+    padding-top: 150px;
+}
+.btn{
+    font-size: 1em;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    padding: 20px;
+    border-radius: 20px;
+}
+.btn:hover{
+    color: white;
+    background-color: blueviolet;
+}
+/* A PROPOS */
+h2{
+    color: yellow;
+    background-color: blueviolet;
+    font-size: 3em;
+    text-shadow: 1px 2px 2px black;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+h3{
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 1.8em;
+    text-shadow: 1px 2px 2px yellow;
+    padding: 10px;
+}
+.apropos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.apropos .gauche{
+    width: 30%;
+}
+.gauche img{
+    width: 100%;
+}
+.apropos .droite{
+    width: 60%;
+    text-align: justify;
+}
+/* SERVICES */
+h4{
+    color: yellow;
+    background-color: blueviolet;
+    font-size: 1.5em;
+    text-shadow: 1px 2px 2px black;
+    padding: 10px;
+    text-align: center;
+}
+.services{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.service{
+    width: 30%;
+    padding: 10px;
+    border: 2px solid blueviolet;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;   
+}
+.service img{
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 1px 2px 3px 3px yellow;
+    height: 200px;
+}
+/* SERVICE 1 */
+.service1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.service1 .gauche{
+    width: 40%;
+}
+.service1 .droite{
+    width: 50%;
+    text-align: center;
+}
+.service1 .gauche img{
+    width: 100%;
+    border-top-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    box-shadow: 1px 2px 3px 3px yellow;
+}
+.service1 ul li{
+    list-style: none;
+    font-weight: bold;
+}
+/* SERVICE 2 */
+.service2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.service2 .droite{
+    width: 40%;
+}
+.service2 .gauche{
+    width: 50%;
+    text-align: center;
+}
+.service2 .droite img{
+    width: 100%;
+    border-top-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    box-shadow: 1px 2px 3px 3px yellow;
+}
+.service2 ul li{
+    list-style: none;
+    font-weight: bold;
+}
+/* SERVICE 3 */
+.service3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.service3 .gauche{
+    width: 40%;
+}
+.service3 .droite{
+    width: 50%;
+    text-align: center;
+}
+.service3 .gauche img{
+    width: 100%;
+    border-top-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    box-shadow: 1px 2px 3px 3px yellow;
+}
+.service3 ul li{
+    list-style: none;
+    font-weight: bold;
+}
+/* BLOG */
+.blog{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.article{
+    width: 20%;
+    text-align:left;
+    padding: 20px;
+    border:2px solid blueviolet ;
+    border-top-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+}
+.article img{
+    width: 20%;
+    float: left;
+    border-top-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 2px 3px 3px yellow;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/* CONTACT */
+iframe{
+    width: 100%;
+    height: 500px;
+    border: 0;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 1px 2px 3px 3px yellow;
+}
+.contact{
+    position: relative;
+    padding-bottom: 50px;
+}
+.formulaire{
+    background-color: green;
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.elementsup{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.elementsup form{
+    background-color: gold;
+    width: 50%;
+    margin-left: 40%;
+    padding: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+form input{
+    width: 98%;
+    height: 30px;
+}
+form textarea{
+    height: 80px;
+    width: 98%;
+}
+.partage{
+    width: 48%;
+}
+.reserver{
+    padding-right: 37%;
+}
+label span{
+    color: red;
+}
+form p{
+    color: red;
+}
+#cgu{
+    width: 10%;
+    height: 20px;
+}
+.cgu{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.cgu a{
+    color: yellow;
+}
+.cgu a:hover{
+    color: greenyellow;
+}
+#submit{
+    width: 20%;
+    padding-bottom: 40px;
+
+}
+#submit:hover{
+    background-color: greenyellow;
+    color: blueviolet;
+}
+/* FOOTER */
+footer{
+    background-color: blueviolet;
+    padding: 50px;
+    margin-top: 50px;
+}
+footer table{
+    width: 100%;
+    text-align: center;
+}
+footer table td{
+    width: 30%;
+}
+footer h3{
+    color: yellow;
+}
+footer ul li{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+}
+footer a:hover{
+    color: orange;
+}
+footer p{
+    padding-top: 100px;
+    color: yellow;
+    font-size: 1em;
+}
+/* RESPONSIVE-HEADER */
+@media screen and (max-width: 500px){
+
+header{
+    display: block;
+    height: 70vh;
+    text-align: center;
+}
+.logo{
+    width: 100%;
+}
+.menu{
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: static;
+}
+.nav{
+    width: 100%;
+}
+header li{
+    width: 100%;
+}
+.sousmenu{
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+.sousmenu li{
+    width: 100%;
+    margin-left: -20px;
+    background-color: transparent;
+}
+header li:hover{
+    background: linear-gradient(blueviolet,blueviolet);
+}
+/* RESPONSIVE-BANNIERE */
+#banniere{
+    padding-top: 60vh;
+}
+h1{
+    padding-top: 100px;
+    font-size: 2em;
+}
+.btn{
+    font-size: 12px;
+    padding: 5px;
+}
+/* RESPONSIVE-SERVICE */
+.services{
+    display: block;
+}
+.service{
+    width: 90%;
+    margin-bottom: 30px;
+}
+/* RESPONSIVE-SERVICE 3 */
+.service3{
+    display: block;
+}
+.service3 .gauche,
+.service3 .droite{
+    width: 90%;
+}
+/* RESPONSIVE-BLOG */
+.blog{
+    display: block;
+}
+.article{
+    width: 90%;
+    margin-bottom: 30px;
+}
+}
